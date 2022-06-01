@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Messages</h1>
+<div>{{name}}</div>
+<div>
+    <form method="post" action="/main">
+        <input type="text" name="text" placeholder="Сообщение"/>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+
+<form method="post" action="filter">
+        <input type="text" name="filter" placeholder="Отправитель"/>
+        <button type="submit">Найти сообщения</button>
+</form>
+<div>Список сообщений:</div>
+{{#messages}}
+    <div>
+        {{id}}
+        {{text}}
+        {{sender}}
+    </div>
+{{/messages}}
+
+</body>
+</html>
