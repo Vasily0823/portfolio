@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>TechIndustry</h1>
+<div>{{name}}</div>
+<div>
+    <form method="post">
+        <input type="number" name="total" placeholder="Сумма сделки"/>
+        <input type="date" name="dateIn" placeholder="Дата поступления"/>
+        <input type="date" name="dateOut" placeholder="Дата продажи"/>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+
+<div>Список продаж</div>
+{{#sales}}
+    <div>
+        <b>{{id}}</b>
+        <i>{{total}}</i>
+        <time>{{dateIn}}</time>
+        <time>{{dateOut}}</time>
+    </div>
+{{/sales}}
+
+</body>
+</html>
